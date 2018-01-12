@@ -1,0 +1,24 @@
+# Install DOSBOX in Ubuntu 16.04 with debugging
+
+# Why
+  - Enables register output, memory exploration, etc in dosbox. EIP=0x41414141
+
+# Tested On 
+  - Ubuntu 16.04 x64
+  - DosBox 0.74
+
+# Prereqs
+$ sudo apt-fast -y install libsdl1.2-dev libsdl-net1.2-dev libsdl-sound1.2-dev lib32ncurses5-dev
+Download the GCC patch https://sourceforge.net/p/dosbox/patches/252/
+move the patch to the same parent as dosbox was expanded
+$ patch -p0 < ./dosbox-0.74_gcc4.6_compat.patch
+
+
+# Build and Install
+Download DSOBOX from SourceForge download link
+$ tar -zxvf <download>
+change into the dir
+$ ./configure --enable-debug=heavy
+$ make -j <CPU Count -1>
+$ sudo make install
+
