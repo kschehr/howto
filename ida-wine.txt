@@ -8,4 +8,10 @@ sudo apt-get install --install-recommends winehq-stable
 
 wine -v  # Just start wine so it asks to grab gecko etc...
 
-Install IDA 6.x (7.x fails installing Python x64, still working that)
+Install IDA 6.x
+wine <installer.exe>
+
+# Install IDAPython for IDA 7.x
+Dowload the Python 2.7 MSI 
+run wine msiexec /i python-2.7.2.amd64.msi /qn
+run the wine installer for IDA 7.x
