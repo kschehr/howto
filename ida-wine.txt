@@ -4,5 +4,8 @@ sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/Release.key
 sudo apt-key add Release.key
 sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+sudo apt-get install --install-recommends winehq-stable
+
 wine -v  # Just start wine so it asks to grab gecko etc...
+
 Install IDA 6.x (7.x fails installing Python x64, still working that)
